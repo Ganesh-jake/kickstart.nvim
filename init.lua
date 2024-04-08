@@ -91,6 +91,7 @@ P.S. You can delete this when you're done too. It's your config now! :)
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.opt.termguicolors = true
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
 
@@ -170,16 +171,23 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 
 -- Custom keymappings added by Jake
 vim.keymap.set({ 'n', 'v' }, '<C-/>', ':CommentToggle<cr>')
+
+-- Navigate through buffer tabs
+vim.keymap.set('n', '<Tab>', ':BufferLineCycleNext<cr>')
+vim.keymap.set('n', '<S-Tab>', ':BufferLineCyclePrev<cr>')
 -- buffers
 vim.keymap.set('n', '<leader>n', ':bn<cr>')
 vim.keymap.set('n', '<leader>p', ':bp<cr>')
 vim.keymap.set('n', '<leader>x', ':bd<cr>')
 
+-- focus and toggle tree view
 vim.keymap.set('n', '<C-n>', ':NvimTreeFindFileToggle<cr>')
 vim.keymap.set('n', '<leader>e', ':NvimTreeFocus<cr>')
+
 -- yank to clipboard
 vim.keymap.set({ 'n', 'v' }, '<leader>y', [["+y]])
 
+-- navigate cursor while in insert mode
 vim.keymap.set('i', '<C-b>', '<ESC>^i', { desc = 'Move Beginning of line' })
 vim.keymap.set('i', '<C-e>', '<End>', { desc = 'Move End of line' })
 vim.keymap.set('i', '<C-h>', '<Left>', { desc = 'Move Left' })

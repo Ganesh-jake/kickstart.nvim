@@ -6,6 +6,14 @@ return {
   -- Color scheme
   { 'catppuccin/nvim', as = 'catppuccin' },
 
+  {
+    'akinsho/bufferline.nvim',
+    version = '*',
+    dependencies = 'nvim-tree/nvim-web-devicons',
+    config = function()
+      require('bufferline').setup {}
+    end,
+  },
   -- File tree
   {
     'nvim-tree/nvim-tree.lua',
