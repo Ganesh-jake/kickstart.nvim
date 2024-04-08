@@ -29,4 +29,17 @@ return {
 
   -- Visualize buffers as tabs
   { 'akinsho/bufferline.nvim', version = '*', dependencies = 'nvim-tree/nvim-web-devicons' },
+  {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    config = true,
+    -- use opts = {} for passing setup options
+    -- this is equalent to setup({}) function
+  },
+  -- {
+  --   'rebelot/terminal.nvim',
+  --   config = function()
+  --     require('terminal').setup()
+  --   end,
+  -- },
 }
