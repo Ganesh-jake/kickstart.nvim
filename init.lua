@@ -170,6 +170,10 @@ vim.keymap.set('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagn
 vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
 -- Custom keymappings added by Jake
+vim.opt.expandtab = false
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+
 vim.keymap.set({ 'n', 'v' }, '<C-/>', ':CommentToggle<cr>')
 
 -- Navigate through buffer tabs
