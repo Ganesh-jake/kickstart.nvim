@@ -199,6 +199,7 @@ vim.keymap.set('i', '<C-l>', '<Right>', { desc = 'Move Right' })
 vim.keymap.set('i', '<C-j>', '<Down>', { desc = 'Move Down' })
 vim.keymap.set('i', '<C-k>', '<Up>', { desc = 'Move Up' })
 
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.
@@ -255,6 +256,7 @@ vim.opt.rtp:prepend(lazypath)
 --  To update plugins you can run
 --    :Lazy update
 --
+
 -- NOTE: Here is where you install your plugins.
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
