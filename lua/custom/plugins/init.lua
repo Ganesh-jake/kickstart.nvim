@@ -53,4 +53,25 @@ return {
   --     require('terminal').setup()
   --   end,
   -- },
+  {
+    'zbirenbaum/copilot.lua',
+    cmd = 'Copilot',
+    event = 'InsertEnter',
+    config = function()
+      require('copilot').setup {
+        panel = {
+          auto_refresh = true,
+          enabled = false,
+        },
+        suggestion = {
+          auto_trigger = true,
+        },
+        filetypes = {
+          javascript = true,
+          python = true,
+          go = true,
+        },
+      }
+    end,
+  },
 }
